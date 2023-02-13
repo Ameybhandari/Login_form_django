@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Sign up</title>
+    </head>
+
+    <body>
+        <h2>This is the signup page</h2>
+        <form action="/signup" method="post">
+        {% csrf_token %}
+
+            <label for=""> Username</label>
+            <input type="text" id="Username" name="Username" placeholder="Enter username here" Required>
+            <br>
+
+            <label for=""> First Name</label>
+            <input type="text" id="First Name" name="F_Name" placeholder="Enter First Name here" Required>
+            <br>
+
+            <label for=""> Last Name</label>
+            <input type="text" id="Last Name" name="L_Name" placeholder="Enter Last Name here" Required>
+            <br>
+
+            <label for=""> Email Id</label>
+            <input type="text" id="Email Id" name="Email_Id" placeholder="Enter Email Id here" Required>
+            <br>
+
+            <label for=""> Password </label>
+            <input type="text" id="Password" name="Password"  placeholder="Create password" Required>
+            <br>
+
+            <label for=""> Confirm Password</label>
+            <input type="text" id="Confirm Password" name="C_Password" placeholder="Confirm your password" Required>
+            <br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </body>
+</html>

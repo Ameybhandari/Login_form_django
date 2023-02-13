@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Index</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    </head>
+    <body>
+
+        {% for message in messages%}
+        <h3> Message: {{message}}</h3>
+        {% endfor %}
+        
+        <h3>Welcome to the Home page</h3>
+
+        {% if user.is_authenticated %}
+        <h3>Welcome {{fname}}, you have successfully logged in</h3>
+        <button type="submit"><a href="/signout">Signout</a></button>
+
+        {% else %}
+        <button type="submit"><a href="/signin">SignIn</a></button>
+        <button type="submit"><a href="/signup">Signup</a></button>
+        {% endif %}
+
+        <script src='main.js'></script>
+    </body> 
+</html>
